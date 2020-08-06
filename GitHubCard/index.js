@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-
-
-
 let gitData = {};
 /*
   STEP 1: using axios, send a GET request to the following URL
@@ -50,7 +47,7 @@ axios.get('https://api.github.com/users/andremichalowski')
     gitData.followers = res.data.followers;
     gitData.following = res.data.following;
     gitData.bio = res.data.bio;
-    console.log(gitData)
+    // console.log(gitData)
 
   })
   .catch(err => {
@@ -64,17 +61,68 @@ axios.get('https://api.github.com/users/andremichalowski')
 */
 
 //Create Function (function createCard(params) { ... })
-
+function createCard(img, name, login, location, profileUrl, followers, following, bio) {
   //1. Create HTML markup: (const *cardElementTitleEx.cCard* = document.createElement('*elementYou'reSelectingFor*))
+  const cCard = document.createElement('div');
+  const cImg = document.createElement('div');
+  const cCardInfo = document.createElement('div');
+  const cName = document.createElement('h3');
+  const cLoginUN = document.createElement('p');
+  const cLocation = document.createElement('p');
+  const cProfileText = document.createElement('p');
+  const cProfileUrl = document.createElement('a');
+  const cFollowers = document.createElement('p');
+  const cFollowing = document.createElement('p');
+  const cBio = document.createElement('p');
 
   //2. Define HTML structure: (*mainCardElementEx.cCard*.append(allCardElementTitlesListedAsParams)
+  cCard.append(cImg, cCardInfo, cName, cLoginUN, cLocation, cProfileText, cProfileUrl, cFollowers, cFollowing, cBio);
 
   //3. Add some class names: (*relevantCardElementThatNeedsClass*.classList.add('*relevantClassName*')
+  cCard.classList.add('card');
+  cCardInfo.classList.add('card-info');
+  cName.classList.add('name');
+  cLoginUN.classList.add('p');
+  cLocation.classList.add('p');
 
   //4. Add some content!: (*relevantCardElementThatNeedsText*.textContent = *objectmadeToHoldAxiosDataEx.gitData*.keyRelevantToCardElement)
                         //(*relevantCardElementThatNeedsSource*.src= *objectmadeToHoldAxiosDataEx.gitData*.keyRelevantToCardElement)
+  cImg.src = img;
+  cName.textContent = name;
+  cLoginUN.textContent = login;
+  cLocation.textContent = gitData.location;
+  cProfileText.textContent = 'Profile', gitData.profileURL;
+  cFollowers.textContent = gitData.followers;
+  cFollowing.textContent = gitData.following;
+  cBio.textContent = gitData.bio;
 
   //5. Return: (return *mainCardElement*Ex.cCard)
+  return cCard;
+};
+  //6. Check DOM
+  // console.log(createCard());
+
+  //7. -----Append Markup to DOM as child of Cards (Manual and forEach)------
+  const cards = document.querySelector('.cards');
+  console.log(cards);
+
+  // //***Append Manual:
+  //    function appendbody(title, date) {
+  //      body.append(createArticle(data.title, 'date', 'firstParagraph', 'secondParagraph', 'thirdParagraph'));
+  //    };
+  //    appendbody();
+ 
+  //  // ***Append Loop
+  //  gitData.forEach((data => {
+  //        cards.append(createCard(data.cImg, data.cCardInfo, data.cName, data.cLogin, data.cLocation));
+  //      }));
+  // console.log(gitData);
+
+  cards.append(createCard(gitData.img, gitData.name, gitData.login, gitData.location, gitData.profileUrl, gitData.followers, gitData.following, gitData.bio));
+
+
+
+
 
 
 
@@ -89,9 +137,6 @@ axios.get('https://api.github.com/users/andremichalowski')
     Using that array, iterate over it, requesting data for each user, creating a new card for each
     user, and adding that card to the DOM.
 */
-
-const followersArray = [];
-
 
 
 /*
