@@ -138,6 +138,18 @@ function createCard(img, name, login, location, profileUrl, followers, following
     user, and adding that card to the DOM.
 */
 
+const followersArray = ["ELAndrews", "sergeikabuldzhanov", "tetondan", "dustinmyers", "justsml", "luishrd", "bigknell"];
+
+followersArray.forEach(element => {
+	axios.get("https://api.github.com/users/" + element)
+		.then(response => {
+			console.log(response.data);
+			const container = document.querySelector(".cards");
+			container.append(card(response.data))
+		}).catch(error => {
+			console.log("errors");
+		})
+});
 
 /*
   List of LS Instructors Github username's:
