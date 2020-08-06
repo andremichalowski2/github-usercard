@@ -5,12 +5,18 @@ import axios from 'axios';
     (replacing the placeholder with your Github name):
     https://api.github.com/users/<your name>
 */
-
+axios.get('https://api.github.com/users/andremichalowski')
+  .then(res => {
+    console.log(res);
+  })
+  .catch(res => {
+    console.log('Failure!:', error);
+  })
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
     github info! You will need to understand the structure of this
     data in order to use it to build your component function
-
+  
     Skip to STEP 3.
 */
 

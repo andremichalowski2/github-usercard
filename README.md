@@ -60,16 +60,16 @@ In this project we are going to be accessing the GitHub API and building a socia
 
 ### Part 2: Create the component function
 
-* Once you are receiving data from the GitHub API, take some time to study the data and the information it is giving you. You will create the HTML template you see in the GitHubCard/index.js file and plugging in the dynamic data you are getting from the GitHub API.
+[ ] * Once you are receiving data from the GitHub API, take some time to study the data and the information it is giving you. You will create the HTML template you see in the GitHubCard/index.js file and plugging in the dynamic data you are getting from the GitHub API.
 * Once you complete the component, create a component based on your profile and add it to the DOM.
 
 ### Part 3: Your Friends
 
-* After you have successfully added your own card to the DOM, we will get a list of your followers and programmatically add cards for them as well. Follow the instructions in GitHubCard/index.js.
+[ ] * After you have successfully added your own card to the DOM, we will get a list of your followers and programmatically add cards for them as well. Follow the instructions in GitHubCard/index.js.
 
 ### Part 4: Exit Ticket 
 
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/J2kBzdr6YLLjXzP8N/7JLwsLBKeWdAFp).
+[ ] Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/J2kBzdr6YLLjXzP8N/7JLwsLBKeWdAFp).
 
 The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
 
