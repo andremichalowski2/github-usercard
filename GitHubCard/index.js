@@ -63,6 +63,18 @@ axios.get('https://api.github.com/users/andremichalowski')
     and append the returned markup to the DOM as a child of .cards
 */
 
+//Create Function (function createCard(params) { ... })
+
+  //1. Create HTML markup: (const *cardElementTitleEx.cCard* = document.createElement('*elementYou'reSelectingFor*))
+
+  //2. Define HTML structure: (*mainCardElementEx.cCard*.append(allCardElementTitlesListedAsParams)
+
+  //3. Add some class names: (*relevantCardElementThatNeedsClass*.classList.add('*relevantClassName*')
+
+  //4. Add some content!: (*relevantCardElementThatNeedsText*.textContent = *objectmadeToHoldAxiosDataEx.gitData*.keyRelevantToCardElement)
+                        //(*relevantCardElementThatNeedsSource*.src= *objectmadeToHoldAxiosDataEx.gitData*.keyRelevantToCardElement)
+
+  //5. Return: (return *mainCardElement*Ex.cCard)
 
 
 
