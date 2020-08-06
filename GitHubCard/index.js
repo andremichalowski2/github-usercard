@@ -16,7 +16,7 @@ axios.get('https://api.github.com/users/andremichalowski')
   STEP 2: Inspect and study the data coming back, this is YOUR
     github info! You will need to understand the structure of this
     data in order to use it to build your component function
-  
+      //(Data "studied" in dev tools")
     Skip to STEP 3.
 */
 
